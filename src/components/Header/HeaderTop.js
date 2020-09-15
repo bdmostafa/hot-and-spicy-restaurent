@@ -12,6 +12,10 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
     },
+    appBar: {
+        paddingLeft: '5rem',
+        paddingRight: '5rem'
+    },
     title: {
         flexGrow: 1,
         '& img': {
@@ -28,7 +32,7 @@ const HeaderTop = () => {
     const classes = useStyles();
     return (
         <div className={classes.root}>
-            <AppBar position="static" color="inherit">
+            <AppBar position="static" color="inherit" className={classes.appBar}>
                 <Toolbar>
                     <Typography variant="h6" className={classes.title}>
                         <img className={classes.img} src={logo} alt="" />
