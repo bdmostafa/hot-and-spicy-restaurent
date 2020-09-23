@@ -5,7 +5,7 @@ import { Button } from '@material-ui/core';
 
 const Foods = () => {
     return (
-        <div>
+        <div style={{marginLeft: '0rem', marginRight: '0rem'}}>
             <Category />
             <FoodsCard />
             <Button variant="contained" disabled>Checkout Your Food</Button>

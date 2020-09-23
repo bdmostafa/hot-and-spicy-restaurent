@@ -1,19 +1,20 @@
-import React from 'react';
-import Header from '../src/components/Header/Header'
-import Foods from '../src/components/Foods/Foods'
-import Footer from '../src/components/Footer/Footer'
-import Testimonial from './components/Testimonial/Testimonial';
+import React, { createContext, useState } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Home from './components/Home/Home';
+import NotFound from './components/NotFound/NotFound';
+
+export const UserContext = createContext();
 
 
 function App() {
+  const [categoryName, setCategoryName] = useState('lunch');
+    const [foodItems, setFoodItems] = useState([]);
   return (
+    <UserContext.Provider value={{category: [categoryName, setCategoryName], food: [foodItems, setFoodItems]}}>
     <Router>
       <Switch>
         <Route exact path="/">
@@ -22,8 +23,12 @@ function App() {
         <Route path="/home">
           <Home />
         </Route>
+        <Route path="*">
+          <NotFound />
+        </Route>
         </Switch>
     </Router>
+    </UserContext.Provider>
   );
 }
 
