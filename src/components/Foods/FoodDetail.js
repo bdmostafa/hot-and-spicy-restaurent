@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
@@ -53,9 +53,10 @@ const FoodDetail = () => {
     const classes = useStyles();
     const { categoryName, foodId } = useParams();
     const [cartCount, setCartCount] = useState(1);
+    const history = useHistory();
 
     // cartCount minimum value must be 1
-    if(cartCount < 1 ) setCartCount(1);
+    if (cartCount < 1) setCartCount(1);
 
     const filteredFood = fakeData.filter(food => food.id == foodId);
     const { name, description, imgUrl, price } = filteredFood[0];
@@ -63,6 +64,10 @@ const FoodDetail = () => {
     const filteredCategory = fakeData.filter(food => food.category == categoryName);
 
     const slicedTwoItems = filteredCategory.slice(0, 2);
+
+    const handleAddToCart = () => {
+        history.push('/delivary');
+    }
 
     return (
         <Container className={classes.root}>
@@ -106,6 +111,7 @@ const FoodDetail = () => {
                         </Button>
                     </h2>
                     <Button
+                        onClick={handleAddToCart}
                         className={classes.cartBtn}
                         variant="contained"
                         color="secondary"
@@ -124,7 +130,7 @@ const FoodDetail = () => {
                                         alt=""
                                     />)
                         }
-                        <ChevronRightIcon style={{marginBottom: '2.5rem'}} />
+                        <ChevronRightIcon style={{ marginBottom: '2.5rem' }} />
                     </div>
                 </Grid>
                 <Grid style={{ textAlign: 'right' }} item xs={6}>
