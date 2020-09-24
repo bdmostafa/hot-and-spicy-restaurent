@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
@@ -6,6 +6,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import { Grid } from '@material-ui/core';
 import { UserContext } from '../../App';
+import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -33,38 +34,48 @@ const useStyles = makeStyles((theme) => ({
 
 const FoodsCard = () => {
     const classes = useStyles();
+    // food state through context API 
     const { food } = useContext(UserContext);
     const [foodItems] = food;
     // Generate 6 item food from randomized data
     const sixItems = foodItems.slice(0, 6)
-    // console.log(foodItems)
+    
+    const history = useHistory();
+
+    const handleDetail = (categoryName, foodId) => {
+        history.push(`/foods/${categoryName}/${foodId}`)
+    }
+
+
     return (
         <Grid container spacing={3} className={classes.root}>
             {
                 sixItems.map(item =>
-                    <Grid key={item.id} item xs={12} sm={4}>
-                        <CardActionArea>
-                            <CardMedia
-                                className={classes.image}
-                                component="img"
-                                alt="Contemplative Reptile"
-                                width="10"
-                                image={item.imgUrl}
-                                title={item.name}
-                            />
-                            <CardContent>
-                                <Typography gutterBottom variant="h5" component="h2">
-                                    {item.name}
-                                </Typography>
-                                <Typography variant="body2" color="textSecondary" component="p">
-                                    {item.title}
-                                </Typography>
-                                <Typography gutterBottom variant="h5" component="h4">
-                                    ${item.price}
-                                </Typography>
-                            </CardContent>
-                        </CardActionArea>
-                    </Grid>
+                    <div onClick={() => handleDetail(item.category, item.id)}>
+                        <Grid key={item.id} item xs={12} sm={4}>
+                            <CardActionArea>
+                                <CardMedia
+                                    className={classes.image}
+                                    component="img"
+                                    alt="Contemplative Reptile"
+                                    width="10"
+                                    image={item.imgUrl}
+                                    title={item.name}
+                                />
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="h2">
+                                        {item.name}
+                                    </Typography>
+                                    <Typography variant="body2" color="textSecondary" component="p">
+                                        {item.title}
+                                    </Typography>
+                                    <Typography gutterBottom variant="h5" component="h4">
+                                        ${item.price}
+                                    </Typography>
+                                </CardContent>
+                            </CardActionArea>
+                        </Grid>
+                    </div>
                 )
             }
         </Grid>

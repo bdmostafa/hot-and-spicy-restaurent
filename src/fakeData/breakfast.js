@@ -1,74 +1,74 @@
 const breakfast = [
     {
         "id": 1,
-        "name": "breakfast1",
+        "name": "Toasted Muffin",
         "category": "breakfast",
-        "title": "breakfast1 title",
+        "title": "Toasted Muffin",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore aperiam reiciendis harum minus temporibus neque adipisci repellat deleniti odit id, nisi qui perspiciatis at esse molestiae, nemo asperiores delectus nobis.",
-        "imgUrl": "../images/Breakfast/breakfast1.png",
+        "imgUrl": "https://i.ibb.co/j3N3W0P/dinner6.png",
         "price": 9.99
     },
     {
         "id": 2,
-        "name": "breakfast2",
+        "name": "Eggs Benedict",
         "category": "breakfast",
-        "title": "breakfast2 title",
+        "title": "Eggs Benedict",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore aperiam reiciendis harum minus temporibus neque adipisci repellat deleniti odit id, nisi qui perspiciatis at esse molestiae, nemo asperiores delectus nobis.",
-        "imgUrl": "../images/Breakfast/breakfast2.png",
+        "imgUrl": "https://i.ibb.co/5YCz8q1/breakfast2.png",
         "price": 19.99
     },
     {
         "id": 3,
-        "name": "breakfast3",
+        "name": "Biscuits and Gravy",
         "category": "breakfast",
-        "title": "breakfast3 title",
+        "title": "Biscuits and Gravy",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore aperiam reiciendis harum minus temporibus neque adipisci repellat deleniti odit id, nisi qui perspiciatis at esse molestiae, nemo asperiores delectus nobis.",
-        "imgUrl": "../images/Breakfast/breakfast3.png",
+        "imgUrl": "https://i.ibb.co/8rq5KPk/breakfast6.png",
         "price": 14.95
     },
     {
         "id": 4,
-        "name": "breakfast4",
+        "name": "Cinnamon Rolls",
         "category": "breakfast",
-        "title": "breakfast4 title",
+        "title": "Cinnamon Rolls",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore aperiam reiciendis harum minus temporibus neque adipisci repellat deleniti odit id, nisi qui perspiciatis at esse molestiae, nemo asperiores delectus nobis.",
-        "imgUrl": "../images/Breakfast/breakfast4.png",
+        "imgUrl": "https://i.ibb.co/fF7tC5m/breakfast5.png",
         "price": 9.95
     },
     {
         "id": 5,
-        "name": "breakfast5",
+        "name": "Belgian Style Waffles",
         "category": "breakfast",
-        "title": "breakfast5 title",
+        "title": "Belgian Style Waffles",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore aperiam reiciendis harum minus temporibus neque adipisci repellat deleniti odit id, nisi qui perspiciatis at esse molestiae, nemo asperiores delectus nobis.",
-        "imgUrl": "../images/Breakfast/breakfast5.png",
+        "imgUrl": "https://i.ibb.co/pQrhfRY/breakfast3.png",
         "price": 11.95
     },
     {
         "id": 6,
-        "name": "breakfast6",
+        "name": "Breakfast Burrito",
         "category": "breakfast",
-        "title": "breakfast6 title",
+        "title": "Breakfast Burrito",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore aperiam reiciendis harum minus temporibus neque adipisci repellat deleniti odit id, nisi qui perspiciatis at esse molestiae, nemo asperiores delectus nobis.",
-        "imgUrl": "../images/Breakfast/breakfast6.png",
+        "imgUrl": "https://i.ibb.co/j3N3W0P/dinner6.png",
         "price": 17.95
     },
     {
         "id": 7,
-        "name": "breakfast7",
+        "name": "French Toast",
         "category": "breakfast",
-        "title": "breakfast7 title",
+        "title": "French Toast",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore aperiam reiciendis harum minus temporibus neque adipisci repellat deleniti odit id, nisi qui perspiciatis at esse molestiae, nemo asperiores delectus nobis.",
-        "imgUrl": "../images/Breakfast/breakfast7.png",
+        "imgUrl": "https://i.ibb.co/wCSfxDP/breakfast4.png",
         "price": 11.95
     },
     {
         "id": 8,
-        "name": "breakfast8",
+        "name": "Bacon and Eggs",
         "category": "breakfast",
-        "title": "breakfast8 title",
+        "title": "Bacon and Eggs",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore aperiam reiciendis harum minus temporibus neque adipisci repellat deleniti odit id, nisi qui perspiciatis at esse molestiae, nemo asperiores delectus nobis.",
-        "imgUrl": "../images/Breakfast/breakfast8.png",
+        "imgUrl": "https://i.ibb.co/7nfDXX3/breakfast1.png",
         "price": 17.95
     }
 ]
