@@ -6,19 +6,12 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import Grid from '@material-ui/core/Grid';
 import fakeData from '../../fakeData';
 import { Button, Container } from '@material-ui/core';
+import Category from '../Category/Category';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        textAlign: 'center',
+        // textAlign: 'center',
         flexGrow: 1,
-    },
-    categoryName: {
-        '& span': {
-            margin: '1.5rem'
-        }
-    },
-    activeCategory: {
-        borderBottom: '3px solid red'
     },
     categoryImg: {
         '& img': {
@@ -72,25 +65,7 @@ const FoodDetail = () => {
     return (
         <Container className={classes.root}>
             <Grid container spacing={3}>
-                <Grid item xs={12}>
-                    <h4 className={classes.categoryName}>
-                        {
-                            categoryName === 'breakfast'
-                                ? <span className={classes.activeCategory}>Breakfast</span>
-                                : <span>Breakfast</span>
-                        }
-                        {
-                            categoryName === 'lunch'
-                                ? <span className={classes.activeCategory}>Lunch</span>
-                                : <span>Lunch</span>
-                        }
-                        {
-                            categoryName === 'dinner'
-                                ? <span className={classes.activeCategory}>Dinner</span>
-                                : <span>Dinner</span>
-                        }
-                    </h4>
-                </Grid>
+                <Category />
                 <Grid style={{ textAlign: 'left' }} item xs={6}>
                     <h2>{name}</h2>
                     <p>{description}</p>

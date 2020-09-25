@@ -18,9 +18,17 @@ function App() {
   const [categoryName, setCategoryName] = useState('lunch');
   const [foodItems, setFoodItems] = useState([]);
   const [loggedInUser, setLoggedInUser] = useState({});
+  const [newUser, setNewUser] = useState({
+    name: '',
+    email: '',
+    password: '',
+    confirmPassword: ''
+  });
+
   return (
     <UserContext.Provider value={{
       loggedUser: [loggedInUser, setLoggedInUser],
+      user: [newUser, setNewUser],
       category: [categoryName, setCategoryName],
       food: [foodItems, setFoodItems]
     }}>
