@@ -39,7 +39,7 @@ const FoodsCard = () => {
     const [foodItems] = food;
     // Generate 6 item food from randomized data
     const sixItems = foodItems.slice(0, 6)
-    
+
     const history = useHistory();
 
     const handleDetail = (categoryName, foodId) => {
@@ -51,8 +51,8 @@ const FoodsCard = () => {
         <Grid container spacing={3} className={classes.root}>
             {
                 sixItems.map(item =>
-                    <div onClick={() => handleDetail(item.category, item.id)}>
-                        <Grid key={item.id} item xs={12} sm={4}>
+                    <div key={item.id} onClick={() => handleDetail(item.category, item.id)}>
+                        <Grid item xs={12} sm={4}>
                             <CardActionArea>
                                 <CardMedia
                                     className={classes.image}

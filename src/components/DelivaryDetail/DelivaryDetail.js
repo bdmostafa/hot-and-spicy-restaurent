@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Category from '../Category/Category';
 import { useHistory, useParams } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
@@ -7,6 +7,7 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import Grid from '@material-ui/core/Grid';
 import fakeData from '../../fakeData';
 import { Button, Container, FormControl, FormHelperText, Input, InputLabel } from '@material-ui/core';
+import { UserContext } from '../../App';
 
 
 
@@ -19,6 +20,8 @@ const useStyles = makeStyles((theme) => ({
 
 const DelivaryDetail = () => {
     const classes = useStyles();
+    const { loggedUser: [loggedInUser] } = useContext(UserContext);
+    const { name } = loggedInUser;
     return (
         <Container className={classes.root}>
             <Category />
@@ -26,8 +29,12 @@ const DelivaryDetail = () => {
                 <Grid style={{ textAlign: 'left' }} item xs={6}>
                     <form action="">
                         <FormControl>
-                            <InputLabel htmlFor="name">Your Name</InputLabel>
-                            <Input id="name" aria-describedby="my-helper-text" />
+                            <InputLabel htmlFor="name"> Your Name</InputLabel>
+                            <Input 
+                            id="name" 
+                            aria-describedby="my-helper-text"
+                            defaultValue={name ? name : ''}
+                            />
                         </FormControl>
                         <FormControl>
                             <InputLabel htmlFor="house">Road, Block, Floor</InputLabel>
